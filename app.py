@@ -16,7 +16,7 @@ async def before_server_start(_app, _loop):
 app.add_route(TelegramWebhookView.as_view(), '/webhooks/telegram/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8891)
+    app.run(host='0.0.0.0', port=8891, debug=True)
 
 
 

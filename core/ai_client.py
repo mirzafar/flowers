@@ -62,7 +62,8 @@ async def http_client(conversations: list) -> str:
 async def on_messages(input_text: str, chat_id: str) -> str:
     input_text = clean_text(input_text)
     if input_text.lower() in ['/start', 'stoop']:
-        return await cache.delete(f'chatbot:conversations:{chat_id}')
+        await cache.delete(f'chatbot:conversations:{chat_id}')
+        return 'Добро пожаловать в наш магазин цветов! Чем могу помочь?'
 
     conversations = await cache.get(f'chatbot:conversations:{chat_id}')
     if conversations:
