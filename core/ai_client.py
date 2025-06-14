@@ -13,7 +13,7 @@ client = AsyncOpenAI(
 
 logger = logging.getLogger(__name__)
 
-system_prompt = """
+system_message = """
 Ты — чат-бот магазина цветов. 
 
 Твоя задача:
